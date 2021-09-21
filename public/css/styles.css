@@ -1,0 +1,261 @@
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 16px; */
+}
+
+input {
+    font-size: 14px;
+}
+
+body {
+    line-height: 1.4;
+    color: #333333;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #777;
+}
+
+input {
+    border: 1px solid #eeeeee;
+    padding: 12px;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 12px;
+    background: #7C5CBF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: background .3s ease;
+}
+
+button:hover {
+    background: #6b47b8;
+}
+
+button:disabled {
+    cursor: default;
+    background: #7c5cbf94;
+}
+
+/* Join Page Styles */
+
+.centered-form {
+    background: #333744;
+    width: 100vw;
+    height: 100vh;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    color: #ffffff;
+    padding-bottom: 40px;
+}
+
+
+.centered-form__box {
+    box-shadow: 0px 0px 17px 1px #1D1F26;
+    background: #F7F7FA;
+    padding: 24px;
+    width: 250px;
+}
+
+.centered-form button {
+    width: 100%;
+}
+
+.centered-form input {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+/* Chat Page Layout */
+
+.chat {
+    display: flex;
+    
+}
+
+.chat__sidebar {
+    height: 100vh;
+    color: white;
+    background: #272626;
+    width: 225px;
+    overflow: auto;
+}
+
+/* Chat styles */
+
+.chat__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #111111;
+    color: #dddddd;
+    max-height: 100vh;
+    padding: 0px;
+}
+
+.chat__messages {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 24px;
+    overflow: auto;
+}
+
+
+/* Message Styles */
+
+.message {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content:flex-start
+      
+}
+
+.flex {
+    background: #3d3c3c;
+    border: 1px solid #3d3c3c;
+    border-radius: 25px 25px 25px 0;
+    padding: 10px;
+    max-width: 50vh;
+
+}
+
+.message-own .flex {
+    background: #352852;
+    border: 1px solid #352852;
+    border-radius: 25px 25px 0 25px;
+}
+
+.message-own {
+    display: flex;
+    justify-content: flex-end !important;
+}
+
+.message__name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 8px;
+    font-style: italic;
+}
+
+.message__meta {
+    color: #777;
+    font-size: 14px;
+}
+
+.message a {
+    color: #0070CC;
+}
+
+/* Message Composition Styles */
+
+.compose {
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    padding: 10px;
+    position: sticky;
+    background: #111111;
+    width: 100%
+}
+
+.compose form {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 0;
+}
+
+.compose input {
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    border-right: 0 ;
+    border-radius: 50px 0 0 50px;
+    height: 50px;
+    flex-grow: 1;
+    
+}
+
+.compose button {
+    width: 10%;
+    font-size: 14px;
+}
+
+#chat-send {
+    background: #ffffff;
+    color: #777777;
+    margin: 0;
+    border: 1px solid #eeeeee;
+    border-left: 0;
+    border-radius: 0 50px 50px 0;
+    height: 50px;
+    transition: color .3s ease;
+    width: auto
+
+}
+#chat-send:hover {
+    color: #7C5CBF;
+}
+
+#send-location {
+    border-radius: 50px;
+    margin: 0 0 0 10px;
+    height: 50px;
+    width: auto;
+    font-size: 14px
+}
+
+/* Chat Sidebar Styles */
+
+.room-title {
+    font-weight: 400;
+    font-size: 22px;
+    background: #2c2f3a;
+    padding: 24px;   
+}
+
+.list-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 4px;
+    padding: 12px 24px 0 24px;
+}
+
+.users {
+    list-style-type: none;
+    font-weight: 300;
+    padding: 12px 24px 0 24px;
+}
+
+.users li {
+    background: #2c2f3a;
+    border: 1px solid #2c2f3a;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 10px;
+    width: 100%;
+}
