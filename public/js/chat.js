@@ -7,6 +7,8 @@ const $chatFormInput = document.querySelector('#chat-message')
 const $chatFormButton = document.querySelector('#chat-send')
 const $locationButton = document.querySelector('#send-location')
 const $messages = document.querySelector('#messages')
+const $sidebar = document.querySelector('#sidebar')
+const $arrow = document.querySelector('.arrow')
 
 // Templates
 const messageTemplate = document.querySelector('#message-template').innerHTML
@@ -18,6 +20,14 @@ const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true }
 
 const user = {
     name: null
+}
+
+const toggleSideBar = (x) => {
+    $sidebar.classList.toggle('open')
+    x.classList.toggle('move')
+
+    
+
 }
 
 const autoScroll = () => {

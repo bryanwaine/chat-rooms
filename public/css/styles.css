@@ -7,7 +7,7 @@
 }
 
 html {
-    /* font-size: 16px; */
+    /* font-size: 5vw; */
 }
 
 input {
@@ -96,14 +96,6 @@ button:disabled {
     
 }
 
-.chat__sidebar {
-    height: 100vh;
-    color: white;
-    background: #272626;
-    width: 225px;
-    overflow: auto;
-}
-
 /* Chat styles */
 
 .chat__main {
@@ -115,13 +107,14 @@ button:disabled {
     color: #dddddd;
     max-height: 100vh;
     padding: 0px;
+    z-index: 0;
 }
 
 .chat__messages {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 24px;
+    padding: 30px 24px 24px;
     overflow: auto;
 }
 
@@ -140,7 +133,7 @@ button:disabled {
     border: 1px solid #3d3c3c;
     border-radius: 25px 25px 25px 0;
     padding: 10px;
-    max-width: 50vh;
+    max-width: 50vw;
 
 }
 
@@ -175,6 +168,7 @@ button:disabled {
 
 .compose {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     flex-shrink: 0;
     padding: 10px;
@@ -223,17 +217,73 @@ button:disabled {
 
 #send-location {
     border-radius: 50px;
-    margin: 0 0 0 10px;
+    margin: 0 5px 0 0;
     height: 50px;
     width: auto;
-    font-size: 14px
+    font-size: 14px;
+    padding: 15px 20px 20px 20px
 }
 
 /* Chat Sidebar Styles */
 
+.chat__sidebar {
+    height: 100vh;
+    color: white;
+    background: #272626;
+    overflow: auto;
+    width: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.arrow {
+    position: absolute;
+    background: #3d3c3c;
+    border: 1px solid #3d3c3c;
+    border-radius: 0 10px 10px 0;
+    margin-left: 0px;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+
+.move {
+    margin-left: 41vw;
+}
+
+.open {
+    width: 225px;
+}
+
+.line {
+    width: 15px;
+    height: 1px;
+    background: white;
+    margin: 13px 0;
+    transition: 0.4s
+    
+}
+
+.line-one {
+    transform: rotate(30deg) translate(2px, 3px)
+}
+
+.line-two {
+    transform: rotate(-30deg) translate(1.5px, -2.5px)
+}
+
+.move .line-one {
+    transform: rotate(-30deg) translate(-1.5px, 2.5px);
+}
+
+.move .line-two {
+    transform: rotate(30deg) translate(-2px, -3px);
+}
+
 .room-title {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 25px;
     background: #2c2f3a;
     padding: 24px;   
 }
@@ -248,7 +298,7 @@ button:disabled {
 .users {
     list-style-type: none;
     font-weight: 300;
-    padding: 12px 24px 0 24px;
+    padding: 0
 }
 
 .users li {
@@ -256,6 +306,19 @@ button:disabled {
     border: 1px solid #2c2f3a;
     border-radius: 10px;
     margin-bottom: 10px;
-    padding: 5px 5px 5px 10px;
-    width: 100%;
+    padding: 5px 5px 5px 15px;
+    margin-bottom: 10px;
+    width: 100%
+}
+
+/* Always show sidebar on big screens */
+
+@media screen and (min-width: 700px) {
+    .chat__sidebar {
+        width: 225px
+    }
+
+    .arrow {
+        display: none;
+    }
 }

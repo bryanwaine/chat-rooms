@@ -11,7 +11,8 @@
 </head>
 <body>
     <div class="chat">
-        <div class="chat__sidebar" id="sidebar"></div>
+        <div class="chat__sidebar" id="sidebar">
+        </div>
         <div class="chat__main">
             <div id="messages" class="chat__messages"></div>
             
@@ -19,7 +20,9 @@
                 <form id="message-form">
                     <input id="chat-message" type="text" name="message" placeholder="Type a message..." required autocomplete="off"><button id="chat-send" >Send</button>
                 </form>
-                <button id="send-location">Send Location</button>   
+                <button id="send-location">
+                    <img src="/img/location.png" alt="">
+                </button>   
             </div>
             
             
@@ -64,6 +67,10 @@
     </script>
 
     <script id="sidebar-template" type=text/html>
+        <div class="arrow" onclick="toggleSideBar(this)">
+            <div class="line line-one"></div>
+            <div class="line line-two"></div>
+        </div>
         <h2 class="room-title">
             {{room}}
         </h2>
