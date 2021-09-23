@@ -9,6 +9,7 @@
 html {
     height: 100vh;
     width: 100vw;
+    background: #111111
 }
 
 input {
@@ -94,6 +95,7 @@ button:disabled {
 
 .chat {
     display: flex;
+    height: 100vh;
     
 }
 
@@ -232,7 +234,7 @@ button:disabled {
     background: #272626;
     overflow: auto;
     width: 0;
-    z-index: 1;
+    z-index: 3;
     transition: 0.4s;
     display: flex;
 }
@@ -243,10 +245,11 @@ button:disabled {
 }
 
 .arrow {
-    position: fixed;
+    position: static;
     background: #2c2f3a;
     border: 1px solid #2c2f3a;
-    border-radius: 0 10px 10px 0;
+    /* border-radius: 0 10px 10px 0; */
+    /* width: 30px; */
     left: 0px;
     top: 20px;
     z-index: 5;
@@ -413,6 +416,6 @@ button:disabled {
     }
 
     .chat__messages {
-        padding: 61px 24px 24px;
+        padding: 60px 24px 24px;
     }
 }
