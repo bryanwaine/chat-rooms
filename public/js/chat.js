@@ -111,7 +111,6 @@ $chatForm.addEventListener('submit', async (e) => {
         $chatFormButton.removeAttribute('disabled')
         input.value = ''
         input.focus()
-        $chatForm.focus()
 
         if (error) {
             return console.log(error)

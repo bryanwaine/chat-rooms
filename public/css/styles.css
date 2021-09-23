@@ -106,7 +106,7 @@ button:disabled {
     justify-content: space-between;
     background: #111111;
     color: #dddddd;
-    max-height: 100vh;
+    height: 100vh;
     padding: 0px;
 }
 
@@ -227,6 +227,7 @@ button:disabled {
 /* Chat Sidebar Styles */
 
 .chat__sidebar {
+    position: fixed;
     height: 100vh;
     color: white;
     background: #272626;
@@ -247,8 +248,9 @@ button:disabled {
     background: #2c2f3a;
     border: 1px solid #2c2f3a;
     border-radius: 0 10px 10px 0;
-    margin-left: 0px;
-    z-index: 2;
+    left: 0px;
+    top: 0;
+    z-index: 5;
     cursor: pointer;
     transition: 0.4s;
 
@@ -358,7 +360,7 @@ button:disabled {
         padding: 12px;
         border-right: 0 ;
         border-radius: 50px 0 0 50px;
-        height: 30px;
+        height: 40px;
         flex-grow: 1;
         max-height: auto;
         
@@ -376,7 +378,7 @@ button:disabled {
         border: 1px solid #eeeeee;
         border-left: 0;
         border-radius: 0 50px 50px 0;
-        height: 30px;
+        height: 40px;
         transition: color .3s ease;
         width: auto;
         padding: 0 15px 0
@@ -406,7 +408,8 @@ button:disabled {
 
 @media screen and (max-width: 375px) {
     html {
-        width: 375px;
-        height: 812px;
+        max-width: 375px;
+        max-height: 812px;
+        overflow: hidden
     }
 }
