@@ -7,7 +7,8 @@
 }
 
 html {
-    /* font-size: 5vw; */
+    height: 100vh;
+    width: 100vw;
 }
 
 input {
@@ -233,6 +234,12 @@ button:disabled {
     width: 0;
     z-index: 1;
     transition: 0.4s;
+    display: flex;
+}
+
+.sidebar-main {
+    width: 100%;
+    z-index: 1;
 }
 
 .arrow {
@@ -248,7 +255,7 @@ button:disabled {
 }
 
 .move {
-    margin-left: 41.5vw;
+    margin-left: 0;
 }
 
 .open {
@@ -329,10 +336,10 @@ button:disabled {
 
     .compose {
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         flex-shrink: 0;
-        padding: 10px;
+        padding: 0 10px;
         position: sticky;
         background: #111111;
         width: 100%;
@@ -341,14 +348,13 @@ button:disabled {
     .compose form {
         display: flex;
         flex-grow: 1;
-        margin-right: 0;
-        margin-left: -15px;
-        padding: 20px 0 0 0;
+        margin: 0;
+        padding: 0;
     }
 
     .compose input {
         width: 100%;
-        margin: 0 -0.5px 0 0;
+        margin: 0;
         padding: 12px;
         border-right: 0 ;
         border-radius: 50px 0 0 50px;
@@ -383,11 +389,10 @@ button:disabled {
     #send-location {
         /* border-radius: 50px; */
         background: none;
-        margin: 0 0 0 -23px;
-        height: 50px;
+        margin: 0;
+        height: 30px;
         width: auto;
-        font-size: 5px;
-        padding: 25px 20px 20px 20px
+        padding: 0
     }
 
     #send-location img {
