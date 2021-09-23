@@ -245,7 +245,7 @@ button:disabled {
 }
 
 .arrow {
-    position: static;
+    position: sticky;
     background: #2c2f3a;
     border: 1px solid #2c2f3a;
     /* border-radius: 0 10px 10px 0; */
