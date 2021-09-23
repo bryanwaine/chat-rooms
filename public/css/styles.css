@@ -172,9 +172,10 @@ button:disabled {
     justify-content: space-between;
     flex-shrink: 0;
     padding: 10px;
-    position: sticky;
+    position: fixed;
+    bottom: 0;
     background: #111111;
-    width: 100%
+    width: 100%;
 }
 
 .compose form {
@@ -191,7 +192,6 @@ button:disabled {
     border-radius: 50px 0 0 50px;
     height: 50px;
     flex-grow: 1;
-    
 }
 
 .compose button {
@@ -208,8 +208,7 @@ button:disabled {
     border-radius: 0 50px 50px 0;
     height: 50px;
     transition: color .3s ease;
-    width: auto
-
+    width: auto;
 }
 #chat-send:hover {
     color: #7C5CBF;
@@ -409,7 +408,7 @@ button:disabled {
 @media screen and (max-width: 375px) {
     html {
         max-width: 375px;
-        max-height: 812px;
+        max-height: 800px;
         overflow: hidden
     }
 }
