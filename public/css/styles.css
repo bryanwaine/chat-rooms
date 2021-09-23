@@ -248,7 +248,7 @@ button:disabled {
     border: 1px solid #2c2f3a;
     border-radius: 0 10px 10px 0;
     left: 0px;
-    top: 0;
+    top: 30px;
     z-index: 5;
     cursor: pointer;
     transition: 0.4s;
@@ -410,5 +410,9 @@ button:disabled {
         max-width: 375px;
         max-height: 750px;
         overflow: hidden
+    }
+
+    .chat__messages {
+        padding: 60px 24px 24px;
     }
 }
