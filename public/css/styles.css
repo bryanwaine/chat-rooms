@@ -408,7 +408,7 @@ button:disabled {
 @media screen and (max-width: 375px) {
     html {
         max-width: 375px;
-        max-height: 800px;
+        max-height: 750px;
         overflow: hidden
     }
 }
