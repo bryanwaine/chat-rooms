@@ -403,3 +403,10 @@ button:disabled {
         filter: brightness(0) saturate(100%) invert(41%) sepia(22%) saturate(12%) hue-rotate(314deg) brightness(94%) contrast(96%)
     }
 }
+
+@media screen and (max-width: 375px) {
+    html {
+        width: 375px;
+        height: 812px;
+    }
+}
