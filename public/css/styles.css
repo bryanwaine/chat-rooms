@@ -107,7 +107,6 @@ button:disabled {
     color: #dddddd;
     max-height: 100vh;
     padding: 0px;
-    z-index: 0;
 }
 
 .chat__messages {
@@ -238,8 +237,8 @@ button:disabled {
 
 .arrow {
     position: absolute;
-    background: #3d3c3c;
-    border: 1px solid #3d3c3c;
+    background: #2c2f3a;
+    border: 1px solid #2c2f3a;
     border-radius: 0 10px 10px 0;
     margin-left: 0px;
     z-index: 1;
@@ -249,7 +248,7 @@ button:disabled {
 }
 
 .move {
-    margin-left: 41vw;
+    margin-left: 41.5vw;
 }
 
 .open {
@@ -320,5 +319,82 @@ button:disabled {
 
     .arrow {
         display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* Chat Sidebar Styles */
+
+    /* Message Composition Styles */
+
+    .compose {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        flex-shrink: 0;
+        padding: 10px;
+        position: sticky;
+        background: #111111;
+        width: 100%;
+        }
+
+    .compose form {
+        display: flex;
+        flex-grow: 1;
+        margin-right: 0;
+        margin-left: -5px;
+        padding: 20px 0 0 0;
+    }
+
+    .compose input {
+        width: 100%;
+        margin: 0 -0.5px 0 0;
+        padding: 12px;
+        border-right: 0 ;
+        border-radius: 50px 0 0 50px;
+        height: 30px;
+        flex-grow: 1;
+        max-height: auto;
+        
+    }
+
+    .compose button {
+        width: 10%;
+        font-size: 14px;
+    }
+
+    #chat-send {
+        background: #ffffff;
+        color: #777777;
+        margin: 0;
+        border: 1px solid #eeeeee;
+        border-left: 0;
+        border-radius: 0 50px 50px 0;
+        height: 30px;
+        transition: color .3s ease;
+        width: auto;
+        padding: 0 15px 0
+
+    }
+    #chat-send:hover {
+        color: #7C5CBF;
+    }
+
+    #send-location {
+        /* border-radius: 50px; */
+        background: none;
+        margin: 0 0 0 -15px;
+        height: 50px;
+        width: auto;
+        font-size: 5px;
+        padding: 25px 20px 20px 20px
+    }
+
+    #send-location img {
+        filter: brightness(0) saturate(100%) invert(41%) sepia(46%) saturate(684%) hue-rotate(218deg) brightness(90%) contrast(94%);
+    }
+
+    button:disabled {
+        filter: brightness(0) saturate(100%) invert(41%) sepia(22%) saturate(12%) hue-rotate(314deg) brightness(94%) contrast(96%)
     }
 }
