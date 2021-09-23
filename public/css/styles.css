@@ -71,7 +71,8 @@ button:disabled {
 }
 .title {
     color: #ffffff;
-    padding-bottom: 40px;
+    padding: 0px;
+    font-size: 20px;
 }
 
 
@@ -245,10 +246,10 @@ button:disabled {
 }
 
 .arrow {
-    position: sticky;
+    position: fixed;
     background: #2c2f3a;
     border: 1px solid #2c2f3a;
-    /* border-radius: 0 10px 10px 0; */
+    border-radius: 0 10px 10px 0;
     /* width: 30px; */
     left: 0px;
     top: 20px;
